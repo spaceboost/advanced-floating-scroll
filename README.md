@@ -1,12 +1,14 @@
-# floating-scroll-advanced
+# advanced-floating-scroll
 
-## The Crux of the Matter
+This project is a fork from [floating-scroll](https://github.com/Amphiluke/floating-scroll). The main reason why we forked the project is because we use it and also we needed to extend it quickly. The biggest feature of it is the option parameter that will be detailed below.
+
+## Introduction
 
 The general purpose of the plugin is to provide some lengthy containers on the page with a separate horizontal scroll bar, which does not vanish from sight when the entire page is scrolled. So, the user will always be able to scroll the container even if its own scroll bar is outside the viewport.
 
 Moreover, the plugin displays such an additional floating scroll bar only in case of actual need, i.e. floatingScroll does not result in unnecessary scroll bar duplication. So, one uses the floating scroll bar only if the “native” one is out of sight.
 
-## Details & API
+## Details
 
 There is the only public method used to instantiate and control a floating scroll — `.floatingScroll()`. The plugin method `.floatingScroll()` should be called in context of a scrollable container. It takes an optional argument `method`. The currently supported methods are
 
@@ -26,11 +28,18 @@ The plugin requires the CSS file [jquery.floatingscroll.css](dist/jquery.floatin
 
 ### Initialisation
 
-The only thing required to apply floatingScroll to a static container (whose sizes will never change during the session) is a single call of the `.floatingScroll()` method on the DOM ready event:
+The only thing required to apply floatingScroll to a static container (whose sizes will never change during the session) is a single call of the `.floatingScroll()` method on the DOM ready event, you can also pass an option object.
 
 ```javascript
 $(document).ready(function () {
     $(".spacious-container").floatingScroll();
+
+    // or
+
+    $(".spacious-container").floatingScroll({
+        keep: true, // Disable scroll hiding
+        bottom: 20, // Scroll position. We needed it because we had a fixed footer
+    });
 });
 ```
 
@@ -92,6 +101,10 @@ The plugin’s CSS file provides some basic styles for elements with classes `.f
 
 You can also make a floating scroll bar more “unobtrusive” so that it will appear only when the mouse pointer hovers over the scrollable container. To do so just apply the class `fl-scrolls-hoverable` to the desired scrollable container owning the floating scroll bar.
 
-## Live demos
+## Feedback
 
-Check out some usage demos [here](https://amphiluke.github.io/floating-scroll/).
+Pull requests, feature ideas and bug reports are very welcome. We highly appreciate any feedback.
+
+## License
+
+MIT

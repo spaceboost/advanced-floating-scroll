@@ -97,6 +97,8 @@ class FScroll {
             let maxVisibleY = inst.scrollBody ?
                 inst.scrollBody[0].getBoundingClientRect().bottom :
                 window.innerHeight || document.documentElement.clientHeight;
+
+            maxVisibleY -= inst.options.bottom;
             mustHide = ((contRect.bottom <= maxVisibleY) || (contRect.top > maxVisibleY));
         }
         if (inst.visible === mustHide) {

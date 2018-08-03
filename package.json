@@ -1,5 +1,5 @@
 {
-  "name": "floating-scroll-advanced",
+  "name": "advanced-floating-scroll",
   "version": "1.0.0",
   "description": "A lightweight jQuery plugin providing floating scrollbar functionality",
   "main": "dist/jquery.floatingscroll.min.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Amphiluke/floating-scroll.git"
+    "url": "https://github.com/spaceboost/advanced-floating-scroll"
   },
   "keywords": [
     "scrollbar",
@@ -22,9 +22,8 @@
   "author": "Spaceboost",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Amphiluke/floating-scroll/issues"
+    "url": "https://github.com/spaceboost/advanced-floating-scroll/issues"
   },
-  "homepage": "https://amphiluke.github.io/floating-scroll/",
   "dependencies": {
     "jquery": ">=1.4.3"
   },
