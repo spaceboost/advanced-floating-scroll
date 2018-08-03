@@ -1,6 +1,6 @@
 # advanced-floating-scroll
 
-This project is a fork from [floating-scroll](https://github.com/Amphiluke/floating-scroll). The main reason why we forked the project is because we use it and also we needed to extend it quickly. The biggest feature of it is the option parameter that will be detailed below.
+This project is a fork from [floating-scroll](https://github.com/Amphiluke/floating-scroll). The main reason why we forked the project is because we use it and we also needed to extend it quickly. The biggest feature of it is the option parameter that will be detailed below.
 
 ## Introduction
 
@@ -39,6 +39,7 @@ $(document).ready(function () {
     $(".spacious-container").floatingScroll({
         keep: true, // Disable scroll hiding
         bottom: 20, // Scroll position. We needed it because we had a fixed footer
+        zIndex: 2, // You know this one ;)
     });
 });
 ```
