@@ -9,6 +9,7 @@ class FScroll {
             inst.scrollBody = scrollBody;
         }
         inst.options = Object.assign({
+            fixed: false,
             zIndex: 10,
             bottom: 0,
         }, options);
@@ -139,7 +140,10 @@ class FScroll {
             inst.sbar.css("left", `${cont.getBoundingClientRect().left}px`);
         }
         $("div", inst.sbar).width(cont.scrollWidth);
-        inst.checkVisibility(); // fixes issue #2
+        
+        if (!inst.options.fixed) { 
+            inst.checkVisibility(); // fixes issue #2
+        }
     }
 
     // Remove a scrollbar and all related event handlers
