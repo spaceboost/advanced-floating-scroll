@@ -88,7 +88,7 @@ class FScroll {
     checkVisibility() {
         let inst = this;
 
-        if (inst.options.keep) {
+        if (inst.options.fixed) {
             return;
         }
 
@@ -141,9 +141,7 @@ class FScroll {
         }
         $("div", inst.sbar).width(cont.scrollWidth);
         
-        if (!inst.options.fixed) { 
-            inst.checkVisibility(); // fixes issue #2
-        }
+        inst.checkVisibility(); // fixes issue #2
     }
 
     // Remove a scrollbar and all related event handlers
